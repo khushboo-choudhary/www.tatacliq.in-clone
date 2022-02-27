@@ -13,9 +13,7 @@ function generateOTP() {
   }
   return OTP;
 }
-// const newToken = (user) => {
-//   return jwt.sign({ user }, process.env.JWT_SECRET_KEY);
-// };
+
 
 const register = async (req, res) => {
   // return res.status(400).send(req.body);
@@ -39,19 +37,14 @@ const register = async (req, res) => {
     });
     user = await User.create(req.body);
   
-    // user = new User()
-    // user.email = req.body.email
-    // user.save();
+   
 
     // then we will create the token for that use
     // then return the user and the token
 
     res.send({ mes: `Otp has been sent to your email address` });
 
-    // else if(number)
-    // return res.status(400).send({message: "please try another number"});
-    //  number = await User.create(req.body);
-    //  res.send({mes: `Otp has been sent to your Number`});
+   
    
   } catch (err) {
     res.status(500).send(err.message);
@@ -77,7 +70,7 @@ const Otp = async (req, res) => {
     }
    
     // then we will create the token for that user
-    // const token = newToken(user);
+   
 
     // then return the user and the token
     res.send({ user });
