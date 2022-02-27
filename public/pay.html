@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png"> 
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png"> 
+    <title>Document</title>
+    <style>
+        .navbar {
+            width: 100%;
+            height: 80px;
+            background-color: black;
+            display: flex;
+            position: static;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+
+        .profile img {
+            width: 40px;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .main {
+            background-color: #ECECEC;
+        }
+
+        .checkout h1 {
+            margin-left: 25px;
+        }
+
+        .bigbox {
+            width: 90%;
+            height: 1200px;
+            /* border: 1px solid black; */
+            margin-left: 25px;
+            display: flex;
+        }
+        .payable{
+            background-color: white;
+            height: 400px;
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+
+        .firstbox {
+            width: 65%;
+            height: 1000px;
+            /* border: 1px solid red; */
+        }
+
+        .delivery,
+        .mode,
+        .giftcard {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            margin-top: 15px;
+        }
+
+        .firstdiv {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .greentick img {
+            width: 60%;
+            margin-top: 15px;
+            /* margin-left: 25px; */
+        }
+
+        .daddress h3 {
+            margin-left: -320px;
+        }
+
+        .change p {
+            margin-right: 20px;
+            text-decoration: underline;
+        }
+
+        .home h3 {
+            margin-top: 5px;
+            margin-left: 35px;
+
+        }
+
+        .giftcard {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .gift1 {
+            display: flex;
+
+        }
+
+        .giftlogo img {
+            width: 70%;
+            margin-top: 35px;
+        }
+
+        .gift2 img {
+            margin-top: 25px;
+            width: 30%;
+        }
+
+        .havecard h6 {
+            color: green;
+
+        }
+        .firstdiv{
+            display: flex;
+        }
+        .paymentmethod{
+            width: 100%;
+            height: 510px;
+            background-color: white;
+            margin-top: 25px;
+            
+        }
+        .pmethod{
+            width: 60%;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+        .first{
+            
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .first img h3{
+            
+            border: 1px solid black;
+            margin-top: 5px;
+        }
+        .detail h3{
+
+            margin-left:10px;
+        }
+        .credit,.debit,.emi,.upi,.netbanking{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid grey;
+            
+        }
+        .one{
+            display: flex;
+        }
+        .flogo img{
+            width: 60%;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        .two img{
+            width: 40%;
+        }
+
+
+
+
+
+
+
+
+
+
+        
+        .div1,
+        .div2,
+        .div3,
+        .div4 {
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+            border-bottom: 1px solid gray;
+        }
+
+        .div1>div,
+        .div2>div,
+        .div3>div,
+        .div4>div {
+            margin-top: 15px;
+        }
+
+        .div6 {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .total {
+            margin-left: 25px;
+            margin-top: 25px;
+        }
+
+        #price {
+            margin-right: 45px;
+            margin-top: 25px
+        }
+
+        .authen {
+            width: 100%;
+            height: 80px;
+            margin-top: 55px;
+            margin-left: 25px;
+            /* border: 2px solid red; */
+            display: flex;
+        }
+
+        .authenlogo img {
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+
+        .details p {
+            margin-left: 50px;
+            color: grey;
+
+        }
+
+       .home{
+           display: flex;
+       }
+       #dis{
+           margin-top: 7px;
+           margin-left: 20px;
+       }
+      
+       @media only screen and (min-width:0px) and (max-width:376px)
+       {
+
+        .bigbox {
+            flex-direction: column;
+        }
+        .payable{
+           width: 80%;
+        }
+
+        .firstbox {
+           width: 80%;
+
+       }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="https://www.tatacliq.com/src/general/components/img/group.7230d9f6111a.svg" alt="">
+            </div>
+            <div class="profile">
+                <img src="https://www.tatacliq.com/src/general/components/img/profile.39b59dc38fd3.png" alt="">
+            </div>
+        </div>
+        <div class="checkout">
+            <h1>Checkout</h1>
+        </div>
+
+
+
+        <div class="bigbox">
+            <div class="firstbox">
+                <div class="delivery">
+                    <div class="firstdiv">
+                        <div class="greentick">
+                            <img src="https://www.tatacliq.com/src/cart/components/img/check.363203d22cca.svg" alt="">
+                        </div>
+                        <div class="daddress">
+                            <h3>Delivery Address</h3>
+                        </div>
+                        <div class="change">
+                            <p>Change</p>
+                        </div>
+                    </div>
+                    <div class="seconddiv">
+                        <div class="home">
+                            <h3>Home</h3>
+                            <h4 id="dis"> </h4>
+
+                        </div>
+                        <div class="displayadd"></div>
+                    </div>
+
+
+                </div>
+                <div class="mode">
+                    <div class="firstdiv">
+                        <div class="greentick">
+                            <img src="https://www.tatacliq.com/src/cart/components/img/check.363203d22cca.svg" alt="">
+                        </div>
+                        <div class="daddress">
+                            <h3>Delivery Mode</h3>
+                        </div>
+                        <div class="change">
+                            <p>Change</p>
+                        </div>
+                    </div>
+                    <div class="seconddiv">
+                        <div class="home">
+                            <h3></h3>
+                        </div>
+                        <div class="displayadd"></div>
+                    </div>
+                </div>
+                <div class="giftcard">
+                    <div class="gift1">
+                        <div class="giftlogo">
+                            <img src="https://www.tatacliq.com/src/cart/components/img/giftbox.02bde42f8804.png" alt="">
+                        </div>
+                        <div class="havecard">
+                            <h4>Have a Gift Card?</h4>
+                            <h6>Redeem your gift card to pay using CLiQ Cash</h6>
+                        </div>
+                    </div>
+                    <div class="gift2">
+                        <img src="https://www.tatacliq.com/src/general/components/img/down-arrow-grey.7cb8fab52c44.svg"
+                            alt="">
+                    </div>
+                </div>
+
+
+                <div class="paymentmethod">
+
+                    <div class="pmethod">
+                        <div class="first">
+                            <div class="image"><h3>(3)</h3></div>
+                            <div class="detail"><h3>Payment Method</h3></div>
+                        </div>
+                        <div class="arrow">
+
+                        </div>
+                    </div>
+
+                  
+
+
+                    <div class="credit">
+                        <div class="one">
+                            <div class="flogo">
+                                <img src="https://www.tatacliq.com/src/cart/components/img/credit-card.e66446752a9a.svg" alt="">
+                            </div>
+                            <div class="fdetails"><h3>Credit Card</h3></div>
+                        </div>
+                        <div class="two">
+                            <img src="https://www.tatacliq.com/src/general/components/img/down-arrow-grey.7cb8fab52c44.svg">
+                        </div>
+                    </div>
+                  
+
+                    <div class="debit">
+                        <div class="one">
+                            <div class="flogo">
+                                <img src="https://www.tatacliq.com/src/cart/components/img/debit-card.6e017e5ce6cd.svg" alt="">
+                            </div>
+                            <div class="fdetails"><h3>Debit Card</h3></div>
+                        </div>
+                        <div class="two">
+                            <img src="https://www.tatacliq.com/src/general/components/img/down-arrow-grey.7cb8fab52c44.svg">
+                        </div>
+                    </div>
+                  
+                    <div class="emi">
+                        <div class="one">
+                            <div class="flogo">
+                                <img src="https://www.tatacliq.com/src/cart/components/img/emi.08bd6f910f18.svg" alt="">
+                            </div>
+                            <div class="fdetails"><h3>EMI</h3></div>
+                        </div>
+                        <div class="two">
+                            <img src="https://www.tatacliq.com/src/general/components/img/down-arrow-grey.7cb8fab52c44.svg">
+                        </div>
+                    </div>
+                   
+                    <div class="upi">
+                        <div class="one">
+                            <div class="flogo">
+                                <img src="https://www.tatacliq.com/src/cart/components/img/upi-checkout-img.cfab06569f21.svg" alt="">
+                            </div>
+                            <div class="fdetails"><h3>UPI ID</h3></div>
+                        </div>
+                        <div class="two">
+                            <img src="https://www.tatacliq.com/src/general/components/img/down-arrow-grey.7cb8fab52c44.svg">
+                        </div>
+                    </div>
+                    
+                    <div class="netbanking">
+                        <div class="one">
+                            <div class="flogo">
+                                <img src="https://www.tatacliq.com/src/cart/components/img/netBanking.ef56d6eee346.svg" alt="">
+                            </div>
+                            <div class="fdetails"><h3>Net Banking</h3></div>
+                        </div>
+                        <div class="two">
+                            <img src="https://www.tatacliq.com/src/general/components/img/down-arrow-grey.7cb8fab52c44.svg">
+                        </div>
+                    </div>
+
+                   
+                    <div class="cod">
+                        <div class="one">
+                            <div class="flogo">
+                                <img src="https://www.tatacliq.com/src/cart/components/img/cod.84145c519aa2.svg" alt="">
+                            </div>
+                            <div class="fdetails" id="cash"><h3>Cash On Delivery</h3></div>
+                            <div id="displ">
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="payable">
+                <div class="div1">
+                    <div class="bagtotal">Bag Total</div>
+                    <div id="bagtotalprice"></div>
+                </div>
+                <div class="div2">
+                    <div class="shippingcharge">Shipping Charge</div>
+                    <div id="shippingprice"></div>
+                </div>
+                <div class="div3">
+                    <div class="bagsub">Bag SubTotal</div>
+                    <div id="bagsubprice"></div>
+                </div>
+                <div class="div4">
+                    <div id="Productdiscount">Product Discount(s)</div>
+                </div>
+                <div class="div5"></div>
+                <hr>
+                <div class="div6">
+                    <div class="total">Total Payable</div>
+                    <div id="price"> </div>
+                </div>
+                <div class="authen">
+                    <div class="authenlogo"><img
+                            src="https://www.tatacliq.com/src/cart/components/img/lock.cb17b4348d63.svg" alt=""></div>
+                    <div class="details">
+                        <p>Safe and secure payments. Easy returns.</p>
+                        <p> 100% Authentic products.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+          
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById("cash").addEventListener("click",show)
+
+    function show()
+    {
+      document.getElementById("displ").innerHTML=""
+       let placeorder=document.createElement("button");
+       placeorder.textContent="Placeorder";
+       document.getElementById("displ").append(placeorder)
+       placeorder.style.backgroundColor="#FF1744";
+       placeorder.style.padding="10px 20px";
+       placeorder.style.borderRadius="15px";
+       placeorder.style.marginLeft="25px";
+
+       placeorder.addEventListener("click",ordersucces)
+
+       function ordersucces()
+       {
+           window.location.href="ordersuccess.html"
+       }
+    }
+
+
+    var res = JSON.parse(localStorage.getItem("database"))
+    console.log(res)
+
+    document.getElementById("dis").innerText=res.address;
+
+
+
+    var p=JSON.parse(localStorage.getItem("data"));
+    console.log(p)
+
+    document.getElementById("bagtotalprice").innerText=p.totalprice;
+    document.getElementById("shippingprice").innerText="0";
+    document.getElementById("bagsubprice").innerText="0"
+    document.getElementById("price").innerText=p.totalprice;
+</script>

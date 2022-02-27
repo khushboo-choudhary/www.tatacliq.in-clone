@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png">
+   <style>
+       #success_con{
+            display: flex;
+            flex-direction: column;
+            max-width: 450px;
+            height: 622px;
+            margin: auto;
+            margin-top: 60px;
+            border-radius: 45px;
+            font-family: sans-serif;
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #close_btn {
+            background: white;
+            font-size: 26px;
+            border: none;
+            margin: 30px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .delBtn {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        #wel {
+            text-align: center;
+            margin-top: 30px;
+          
+        } 
+       .image{
+           padding: 20px;
+       }
+   </style>
+</head>
+<body>
+    <div id="success_con">
+        <div class="delBtn">
+            <button id="close_btn"><i class="fas fa-times"></i></button>
+        </div>  
+        <img src="https://www.tatacliq.com/src/mobile-number-login/images/sucess_login.4ea69fa73c4e.svg" alt="" class="image">
+        <div id="wel">
+            <h1>You're Successfully</h1>
+            <h1>Logged In</h1>
+            <h1>Start CLiQing</h1>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector('#close_btn').addEventListener('click', function () {
+        window.location.href = 'index.html'
+    })
+</script>

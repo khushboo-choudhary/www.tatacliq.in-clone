@@ -1,0 +1,125 @@
+let maiData = [{
+    name : 'Nuon Men',
+    title:'Nuon by Westside Charcoal Rodeo Carrot Fit Jeans',
+    price: 1499,
+    Crossprice : 999,
+    url : 'https://img.tatacliq.com/images/i5/437Wx649H/MP000000006243509_437Wx649H_20200102084746.jpeg',
+}, {
+    name : 'Nuon Men',
+    title:'Nuon by Western Olive Striped Slim-Fit Sweatshirt',
+    price: 599,
+    Crossprice : 1299,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011146971_437Wx649H_202111122142111.jpeg",
+}, {
+    name : 'Kala',
+    title:'Westside Kala by ETA Light Mauve Nehru Jacket',
+    price: 799,
+    Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011000674_437Wx649H_202110250035181.jpeg",
+}, {
+    name : 'WES Casuals',
+    title:'WES Casuals by Westside Blue Relaxed-Fit Checkes Shirt',
+    price: 599,
+    Crossprice : 1299,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000009254125_437Wx649H_202104070349191.jpeg",
+}, {  
+    name : 'Nuon Men',
+     title:'Nuon by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 999,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000008483051_437Wx649H_202101062025431.jpeg",
+},{  
+    name : 'Studiofit Men',
+     title:'Nuon by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 799,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000010023679_437Wx649H_202107180005031.jpeg",
+},{  
+    name : 'WES Formals',
+     title:'Wes by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 999,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000010872117_437Wx649H_202110092201031.jpeg",
+},{  
+    name : 'ETA',
+     title:'ETA by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 999,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000009174540_437Wx649H_202103270012541.jpeg",
+},{  
+    name : 'WES Casuals',
+     title:'WES by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 399,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i8/437Wx649H/MP000000011755246_437Wx649H_202201130245481.jpeg",
+},{  
+    name : 'ETA',
+     title:'ETA by Westside Blue Whiskering Rodeo carrot fit Shirts',
+    price: 1499,
+    // Crossprice : 1699,
+    url : "	https://img.tatacliq.com/images/i7/437Wx649H/MP000000011190986_437Wx649H_202111172127481.jpeg",
+},{  
+    name : 'Kala',
+     title:'Kala by Westside Blue Whiskering Rodeo carrot fit Jackets',
+    price: 1499,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011000693_437Wx649H_202110250036031.jpeg",
+},{  
+    name : 'NEON Men',
+     title:'Nuon by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 1999,
+    // Crossprice : 1699,
+    url : 'https://img.tatacliq.com/images/i7/437Wx649H/MP000000009676842_437Wx649H_202105301648501.jpeg',
+},{  
+    name : 'WES Casuals',
+     title:'WES Casuals by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 1499,
+    // Crossprice : 1699,
+    url :"https://img.tatacliq.com/images/i7/437Wx649H/MP000000010369003_437Wx649H_202108211732191.jpeg",
+},{  
+    name : 'ETA',
+    title : 'ETA by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 1499,
+    // Crossprice : 1699,
+    url : "	https://img.tatacliq.com/images/i7/437Wx649H/MP000000011208289_437Wx649H_202111182357091.jpeg",
+},{  
+    name : 'Nuon men',
+     title:'Nuon men by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 1499,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011208241_437Wx649H_202111182354101.jpeg",
+},{  
+    name : 'Ascot',
+     title:'Ascot by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 599,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000010363389_437Wx649H_202108211113521.jpeg",
+},{  
+    name : 'Ascot',
+     title:'Ascot by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 599,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000009846887_437Wx649H_202106250229491.jpeg",
+},{  
+    name : 'Ascot',
+     title:'Ascot by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 599,
+    // Crossprice : 1699,
+    url : "	https://img.tatacliq.com/images/i7/437Wx649H/MP000000009109754_437Wx649H_202104040013351.jpeg",
+},{  
+    name : 'Ascot',
+     title:'Ascot by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 599,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000008541973_437Wx649H_202101122056051.jpeg",
+},{  
+    name : 'WES Formals',
+     title:'WES Formals by Westside Blue Whiskering Rodeo carrot fit Jeans',
+    price: 599,
+    // Crossprice : 1699,
+    url : "https://img.tatacliq.com/images/i7/437Wx649H/MP000000009255915_437Wx649H_202104070526101.jpeg",
+},
+
+];
+
+export default maiData;
