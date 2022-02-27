@@ -1,7 +1,5 @@
-const mongoose = require("mongoose");
+const mongoose=require('mongoose');
 
-module.exports = () => {
-    // return mongoose.connect("mongodb+srv://khushboo:khushboo123@cluster0.edtcl.mongodb.net/tatacliq");
-    return mongoose.connect("mongodb://localhost:27017/tatacliq");
-  };
-  
+module.exports= ()=>{
+    return mongoose.connect("mongodb+srv://tatacliqclone:tatacliq@cluster0.hbbfo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+}
