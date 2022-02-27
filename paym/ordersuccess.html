@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png"> 
+    <title>Document</title>
+    <style>
+          .navbar {
+            width: 100%;
+            height: 80px;
+            background-color: black;
+            display: flex;
+            position: static;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+
+        .profile img {
+            width: 40px;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+
+        <div class="logo">
+            <img src="https://www.tatacliq.com/src/general/components/img/group.7230d9f6111a.svg" alt="">
+        </div>
+        <div class="profile">
+            <img src="https://www.tatacliq.com/src/general/components/img/profile.39b59dc38fd3.png" alt="">
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="name"></div>
+        <div id="success"></div>
+    </div>
+</body>
+</html>
+<script>
+    var getdetails=JSON.parse(localStorage.getItem("database"))
+    console.log(getdetails)
+
+    let head3=document.createElement("h3");
+    head3.textContent=getdetails.fname+" "+getdetails.sname;
+    document.getElementById("name").append(head3);
+
+    let para=document.createElement("p");
+    para.textContent="Your Order is placed succesfully,Thank you for ordering from TATA CLIQ";
+    para.style.color="green";
+    document.getElementById("success").append(para);
+    
+</script>
