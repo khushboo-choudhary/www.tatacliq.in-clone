@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <style>
+       @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+       body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+       #container {
+            display: flex;
+            flex-direction: column;
+            max-width: 450px;
+            height: 522px;
+            margin: auto;
+            margin-top: 60px;
+            border-radius: 45px;
+            font-family: sans-serif;
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #wel {
+            text-align: center;
+            line-height: 76%;
+        }
+        #wel > p{
+            color: lightslategrey;
+        }
+
+        a {
+            text-decoration: none;
+            color: crimson;
+            font-weight: bold;
+        }
+
+        #fieldset {
+            position: relative;
+            height: 35px;
+            width: 78%;
+            margin-left: 10%;
+            margin-bottom: 17px;
+            margin-top: 20px;
+            display: flex;
+        }
+
+        #email {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 89%;
+            border: 1px solid lightgray;
+            font-size: 16px;
+            padding: 0 20px;
+            outline: none;
+            background: none;
+            z-index: 1;
+        }
+
+        .label {
+            position: absolute;
+            top: 10px;
+            padding: 0 4px;
+            background-color: white;
+            color: lightgray;
+            font-size: 16px;
+            transition: 0.5s;
+            z-index: 0;
+        }
+
+        #right {
+            left: 20px;
+        }
+
+        input::placeholder {
+            color: transparent;
+        }
+
+        #email:focus+.label {
+            top: -10px;
+            z-index: 10;
+            margin-left: -5px;
+            font-size: 14px;
+            color: lightgrey;
+        }
+
+        #close_btn {
+            background: white;
+            font-size: 26px;
+            border: none;
+            margin: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #container>p {
+            margin: auto;
+            width: 75%;
+            margin-top: 35px;
+            font-size: 14px;
+        }
+
+        .button {
+            width: 80%;
+            height: 9.5%;
+            margin: auto;
+            margin-top: -100px;
+            border-radius: 15px;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            border: 0;
+            outline: none;
+            background-color: #e4e4e4;
+            cursor: not-allowed;
+        }
+
+        .btnEn {
+            width: 80%;
+            border-radius: 15px;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            border: 0;
+            outline: none;
+            padding: 13px 15px;
+            background-image: linear-gradient(to bottom right, #89216b, #da4453);
+            box-shadow: 0 28px 18px -23px #da4453;
+            cursor: pointer;
+        }
+
+        .delBtn {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="delBtn">
+            <button id="close_btn"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div id="wel">
+            <h1>Welcome to Tata</h1>
+            <h1>CLiQ</h1>
+            <p>Please enter your Email Address</p>
+        </div>
+
+        <!-- Email Address details -->
+        <div id="box1">
+            <div id="fieldset">
+                <input type="email" class="input" placeholder="Enter E-mail Address" id="email" onkeyup="handle()" />
+                <label for="mail" class="label" id="right">E-mail Address</label>
+            </div>
+        </div>
+
+        <p>By continue you are agree to our
+            <a href="#" class="">Terms of Service</a> &
+            <a href="#" class="">Privacy Policy</a>
+        </p>
+        <button class="button" disabled>Continue</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+   
+    function handle() {
+        let email = document.querySelector("#email").value;
+
+    // email verification  
+        if (email != null) {
+            if (email.length > 5 && email.includes("@") && email.endsWith(".com")) {
+                document.querySelector(".button").disabled = false;
+                document.querySelector(".button").classList.add("btnEn");
+            }
+        } else {
+            document.querySelector(".button").disabled = true;
+        }
+
+    }
+    document.querySelector(".button").addEventListener("click", function () {
+        window.location.href = "./successlogin.html";
+    });
+   
+    document.querySelector("#close_btn").addEventListener("click", function () {
+        window.location.href = "./index.html";
+    })
+</script>

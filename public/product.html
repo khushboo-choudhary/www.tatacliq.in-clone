@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="style/product.css">
+    <title>Product</title>
+</head>
+<body>
+    <div id="navbar">
+        
+    </div>
+    <!-- Main  -->
+<div id="twobox">
+    <div class="filter">
+        <div class="fil1">
+            <p>Filters</p>
+            <p>Clear All</p>
+        </div>
+<hr>
+        <div class="fil2">
+            <p>Department</p>
+            <p>Men's Clothing</p>
+        </div>
+
+        <div class="fil3">
+            <p>Category</p>
+            <p class="Nuon">Nuon Man</p>
+            <p class="wesF">WES Formals</p>
+            <p class="wesC">WES Casuals</p>
+            <p class="eta">Eta</p>
+            <p class="Ascot">Ascot</p>
+    </div>
+    </div>
+    <div id="ravmain">
+
+    </div>
+</div>
+
+    <!-- Main end -->
+    <!-- <div id="Foot_container">
+
+    </div> -->
+</body>
+<script src="./script/index.js"></script>
+<script src="./components/navmain.js" type="module"></script>
+<script src="./script/data.js" type="module"></script>
+</html>
+
+<script type="module">
+    //   import footer from './components/footer.js';
+
+    //   let foot = document.querySelector('#Foot_container');
+
+    // foot.innerHTML = footer();
+
+      import maiData from './script/productdata.js';
+      
+      let myData = maiData;
+      let cArr = JSON.parse(localStorage.getItem('localDa')) || [];
+      
+    display(myData)
+      function display(myData) {
+          document.querySelector('#ravmain').innerHTML = '';
+      myData.map(function(elm) {
+          let div1 = document.createElement('div');
+          div1.setAttribute('id', 'div1s')
+
+          let img1 = document.createElement('img');
+          img1.setAttribute('class', 'imgF');
+          img1.src = elm.url;
+          let p1 = document.createElement('p');
+          p1.textContent = elm.name;
+          let p2 = document.createElement('p');
+          p2.textContent = elm.title;
+          let p3 = document.createElement('p');
+          p3.textContent = elm.Newprice;
+          let div2 = document.createElement('div');
+          div2.setAttribute('class', 'button');
+          div2.textContent = 'Buy Now';
+
+          div2.addEventListener('click', localData);
+          function localData() {
+              cArr.push(elm);
+              localStorage.setItem('localDa', JSON.stringify(cArr));
+              console.log(cArr);
+          }
+
+          document.querySelector('#ravmain').append(div1);
+          div1.append(img1, p1, p2, p3, div2)
+      })
+    }
+
+
+
+    let arr = [];
+
+        document.querySelector('.Nuon').addEventListener('click', nuon);
+        function nuon() {
+            let val = 'Nuon Men';
+            myData.filter(function(a) {
+         if(a.name == val) {
+             arr.push(a);
+
+             display(arr);
+         } 
+        });
+
+        }
+
+
+        document.querySelector('.wesF').addEventListener('click', wesF);
+        function wesF() {
+            let val = 'WES Formals';
+            myData.filter(function(a) {
+                arr = [];
+         if(a.name == val) {
+
+            arr = [];
+             arr.push(a);
+
+             display(arr);
+         } 
+        });
+
+        }
+
+
+        document.querySelector('.wesC').addEventListener('click', wesC);
+        function wesC() {
+            let val = 'WES Casuals';
+            myData.filter(function(a) {
+                arr = [];
+         if(a.name == val) {
+
+            arr = [];
+             arr.push(a);
+
+             display(arr);
+         } 
+        });
+
+        }
+
+
+        document.querySelector('.Ascot').addEventListener('click', Ascot);
+        function Ascot() {
+            let val = 'Ascot';
+            myData.filter(function(a) {
+                arr = [];
+         if(a.name == val) {
+
+            arr = [];
+             arr.push(a);
+
+             display(arr);
+         } 
+        });
+
+        }
+
+        document.querySelector('.eta').addEventListener('click', eta);
+        function eta() {
+            let val = 'ETA';
+            myData.filter(function(a) {
+                arr = [];
+         if(a.name == val) {
+
+            arr = [];
+             arr.push(a);
+
+             display(arr);
+         } 
+        });
+
+        }
+</script>

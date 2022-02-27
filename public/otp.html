@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp</title>
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <style>
+        #otp {
+            display: flex;
+            flex-direction: column;
+            max-width: 450px;
+            height: 522px;
+            margin: auto;
+            margin-top: 60px;
+            border-radius: 45px;
+            font-family: sans-serif;
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #close_btn {
+            background: white;
+            font-size: 26px;
+            border: none;
+            margin: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .delBtn {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #almost {
+            width: 350px;
+            height: 150px;
+            margin: auto;
+            text-align: center;
+            margin-top: -20px;
+        }
+
+        #almost>p {
+            color: grey;
+        }
+
+        #otpInput {
+            margin: auto;
+            display: flex;
+            width: 350px;
+            height: 50px;
+            margin-top: -100px;
+        }
+
+        #otpInput>input {
+            width: 45px;
+            margin-right: 5px;
+            outline: none;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #edit_num {
+            display: flex;
+            width: 350px;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: -130px;
+            color: crimson;
+            font-weight: bold;
+        }
+
+        #edit_num>p>a {
+            text-decoration: none;
+            color: crimson;
+        }
+
+        .otp_btn {
+            width: 80%;
+            height: 9%;
+            margin: auto;
+            margin-top: -100px;
+            border-radius: 15px;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            border: 0;
+            outline: none;
+            padding: 13px 15px;
+            background-color: #e4e4e4;
+            cursor: not-allowed;
+        }
+
+        .btnEn {
+            width: 80%;
+            border-radius: 15px;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            border: 0;
+            outline: none;
+            padding: 13px 15px;
+            background-image: linear-gradient(to bottom right, #89216b, #da4453);
+            box-shadow: 0 28px 18px -23px #da4453;
+            cursor: pointer;
+        }
+
+        #resend {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="otp">
+        <!-- delete option for whole pagr -->
+        <div class="delBtn">
+            <button id="close_btn"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div id="almost">
+            <h1>Almost There</h1>
+            <p>Please enter the 6 digit OTP that we just
+                sent on your Mobile number
+            </p>
+        </div>
+
+        <!--Enter otp value here  -->
+        <!-- <form Method="post" action="/sendMessage"> -->
+            <div id="otpInput">
+
+                <input id="inp1" type="text" maxlength="1" onkeyup="checkOtp()">
+                <input id="inp2" type="text" maxlength="1" onkeyup="checkOtp()">
+                <input id="inp3" type="text" maxlength="1" onkeyup="checkOtp()">
+                <input id="inp4" type="text" maxlength="1" onkeyup="checkOtp()">
+                <input id="inp5" type="text" maxlength="1" onkeyup="checkOtp()">
+                <input id="inp6" type="text" maxlength="1" onkeyup="checkOtp()">
+
+            </div>
+        <!-- </form> -->
+        <!-- edit number and regenrate the otp -->
+        <div id="edit_num">
+            <p><a href="./signup.html">Edit Number</a></p>
+            <p id="resend" onclick="generateOTP()">Resend OTP</p>
+        </div>
+
+        <button class="otp_btn" disabled>Continue</button>
+
+
+    </div>
+</body>
+
+</html>
+
+<script>
+
+
+    function checkOtp() {
+        var str_otp = "";
+
+        var inp1 = document.querySelector("#inp1").value;
+        var inp2 = document.querySelector("#inp2").value;
+        var inp3 = document.querySelector("#inp3").value;
+        var inp4 = document.querySelector("#inp4").value;
+        var inp5 = document.querySelector("#inp5").value;
+        var inp6 = document.querySelector("#inp6").value;
+
+        // function for checking  otp length and empty or not
+        if (((inp1.length === 1) && (inp2.length === 1) && (inp3.length === 1) && (inp4.length === 1) && (inp5.length === 1) && (inp6.length === 1)) && ((inp1 != "") && (inp2 != "") && (inp3 != "") && (inp4 != "") && (inp5 != "") && (inp6 != ""))) {
+            document.querySelector(".otp_btn").disabled = false;
+            document.querySelector(".otp_btn").classList.add("btnEn");
+            str_otp += inp1 + inp2 + inp3 + inp4 + inp5 + inp6
+            verifyOTP(str_otp);
+
+        }
+        // diasabled button input empty then button should disabled
+        else {
+            document.querySelector(".otp_btn").disabled = true;
+            document.querySelector(".otp_btn").style.background =
+                "linear-gradient(to bottom right, #89216b, #da4453);";
+        }
+
+    }
+
+    document.querySelector(".otp_btn").addEventListener("click", function () {
+        window.location.href = "./loginEmail.html";
+    });
+    document.querySelector("#close_btn").addEventListener("click", function () {
+        window.location.href = "./index.html";
+    });
+
+    //get value from localstorage
+    var local_otp = JSON.parse(localStorage.getItem("store_otp"));
+
+    // generate otp
+    function generateOTP() {
+
+        var digits = '0123456789';
+        let OTP = '';
+        for (let i = 0; i < 6; i++) {
+            OTP += digits[Math.floor(Math.random() * 10)];
+        }
+        setTimeout(() => {
+            alert(OTP);
+         
+        }, 3000)
+
+        //store value in localstorage
+
+        localStorage.setItem("store_otp", JSON.stringify(OTP));
+
+    }
+
+    // verify otp same or not
+    function verifyOTP(inputOTP) {
+        var generatedOTP = JSON.parse(localStorage.getItem("store_otp"));
+
+        if (Number(generatedOTP) == inputOTP)
+            alert("OTP Verified");
+        else
+            alert("OTP Invalid");
+    }
+
+    generateOTP();
+
+</script>
