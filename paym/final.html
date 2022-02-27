@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png"> 
+
+    <style>
+        .navbar {
+            width: 100%;
+            height: 80px;
+            background-color: black;
+            display: flex;
+            position: static;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+
+        .profile img {
+            width: 40px;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        /* ddddddddddddddddddddddddddddddddddddd */
+        .main {
+            width: 100%;
+            height: 1200px;
+            background-color: #ECECEC;
+        }
+
+        #checkout {
+            width: 95%;
+            height: 80px;
+            margin: auto;
+            padding-top: 10px;
+
+        }
+
+        .secondmain {
+            width: 100%;
+            /* height: 1200px; */
+
+            /* border: 2px solid goldenrod; */
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .shipping {
+            width: 60%;
+            height: 700px;
+            background-color: white;
+            margin-left: 20px;
+        }
+
+        .payable {
+            width: 38%;
+            height: 400px;
+            background-color: white;
+            margin-left: 25px;
+        }
+
+        #firstdiv {
+            width: 90%;
+            height: 50px;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #numadd {
+            width: 40%;
+            display: flex;
+            /* justify-content: space-between; */
+
+            align-items: center;
+            /* border: 2px solid red; */
+        }
+
+        #add h3 {
+            margin-left: 30px;
+            color: black;
+
+        }
+
+
+        #num {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid black;
+            margin-top: 1%;
+
+        }
+
+        #num h2 {
+            margin-top: 2px;
+            margin-left: 8px;
+        }
+
+        #clearall h3 {
+            text-decoration: underline;
+            color: #4A4A4A;
+            margin-top: 15px;
+        }
+
+
+        #seconddiv {
+            width: 100%;
+            height: 1000px;
+            /* border: 2px solid forestgreen; */
+        }
+
+        #boxes {
+            width: 100%;
+            height: 400px;
+            /* border: 2px solid red; */
+            display: flex;
+
+        }
+
+        #firstbox {
+            width: 45%;
+            height: 400px;
+            /* border: 2px solid black; */
+            /* margin-left: 5%; */
+        }
+
+
+        #secondbox {
+            width: 45%;
+            height: 400px;
+            /* border: 2px solid black; */
+            margin-left: 5%;
+        }
+
+        #firstnamedetails {
+            width: 100%;
+            height: 350px;
+            /* border: 2px solid red; */
+        }
+
+        #name {
+            display: flex;
+        }
+
+        #name input {
+            width: 100%;
+            margin-top: 12px;
+            margin-right: 25px;
+            padding: 10px 0px;
+            border-radius: 5px;
+        }
+
+
+
+
+
+
+
+
+
+
+        #city input {
+            width: 95%;
+            margin-top: 45px;
+            padding: 10px 2px;
+            border-radius: 5px;
+        }
+
+        #state input {
+            width: 95%;
+            margin-top: 45px;
+            padding: 10px 2px;
+            border-radius: 5px;
+
+        }
+
+
+
+        #landmark input {
+            width: 95%;
+            margin-top: 45px;
+            padding: 10px 2px;
+            border-radius: 5px;
+        }
+
+        #mobilenumber input {
+            margin-top: 45px;
+            padding: 10px 2px;
+            border-radius: 5px;
+        }
+
+        #pin input {
+            margin-top: 15px;
+            padding: 10px 0;
+        }
+
+        #secondbox input {
+            width: 90%;
+        }
+
+        #address input {
+            height: 70px;
+            margin-top: 25px;
+            padding: 15px 0;
+        }
+
+        #landmark input {
+            width: 95%;
+            margin-top: 25px;
+        }
+
+        #mobilenumber input {
+            margin-top: 45px;
+        }
+
+        .thirdbox {
+            width: 50%;
+            height: 100px;
+            /* border: 2px solid yellowgreen; */
+            margin-left: 40%;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5%;
+
+        }
+
+        .button1 h4 {
+            margin-top: 15px;
+            margin-left: 5px;
+            color: #FF1744;
+            ;
+        }
+
+        #save {
+            background-color: #FF1744;
+            color: whitesmoke;
+            padding: 10px 20px;
+            border-radius: 20px;
+
+        }
+
+       
+
+        .div1,
+        .div2,
+        .div3,
+        .div4 {
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+            border-bottom: 1px solid gray;
+        }
+
+        .div1>div,
+        .div2>div,
+        .div3>div,
+        .div4>div {
+            margin-top: 15px;
+        }
+
+        .div6 {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .total {
+            margin-left: 25px;
+            margin-top: 25px;
+        }
+
+        #price {
+            margin-right: 45px;
+            margin-top: 45px;
+        }
+
+        .authen {
+            width: 100%;
+            height: 80px;
+            margin-top: 55px;
+            margin-left: 25px;
+            /* border: 2px solid red; */
+            display: flex;
+        }
+
+        .authenlogo img {
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+
+        .details p {
+            margin-left: 50px;
+            color: grey;
+
+        }
+.total h4{
+    margin-left: 15px;
+}
+        /* 
+@media only screen and (min-width:376px) and (max-width:700px)
+{
+    .secondmain{
+        display: flex;
+        flex-direction: column;
+    }
+} */
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+
+        <div class="logo">
+            <img src="https://www.tatacliq.com/src/general/components/img/group.7230d9f6111a.svg" alt="">
+        </div>
+        <div class="profile">
+            <img src="https://www.tatacliq.com/src/general/components/img/profile.39b59dc38fd3.png" alt="">
+        </div>
+    </div>
+
+
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas eligendi magnam adipisci est quisquam repellendus odit optio. Veniam delectus ipsum error. Sunt eos sequi vitae id omnis. Sapiente, tempora asperiores dolores suscipit explicabo voluptate eaque veniam, quidem ipsa maiores eius, harum facilis consequatur! -->
+
+
+    <div class="main">
+        <div class="firstmain">
+            <div id="checkout">
+                <h1>Checkout</h1>
+            </div>
+        </div>
+        <div class="secondmain">
+
+            <div class="shipping">
+
+                <div id="firstdiv">
+                    <div id="numadd">
+                        <div id="num">
+                            <h2>1</h2>
+                        </div>
+                        <div id="add">
+                            <h3>Add Shipping Address</h3>
+                        </div>
+                    </div>
+                    <div id="clearall">
+                        <h3>Clear all</h3>
+                    </div>
+                </div>
+
+                <div id="seconddiv">
+                    <div id="boxes">
+                        <div id="firstbox">
+
+                            <div id="firstnamedetails">
+                                <div id="name">
+                                    <input type="text" name="" id="fname" placeholder="First Name(Required)*">
+                                    <input type="text" name="" id="sname" placeholder="Last Name(Required)*">
+                                </div>
+                                <div id="city">
+                                    <input type="text" name="" id="citydistrict" placeholder="City/District Required">
+                                </div>
+                                <div id="state">
+                                    <input type="text" id="statedetails" placeholder="State(Required)*">
+                                </div>
+                                <div id="landmark">
+                                    <input type="text " id="landmark" placeholder="Landmark (Optional)*">
+                                </div>
+
+                            </div>
+                            <div id="locate">
+                                <input type="radio" name="home">Home
+                                <input type="radio" name="home">Office
+                            </div>
+                        </div>
+
+
+
+                        <div id="secondbox">
+
+                            <div id="adddetails">
+                                <div id="pin">
+                                    <input type="text" name="" id="pincode"
+                                        placeholder="Enter Your PIN Code(Required)*">
+                                </div>
+                                <div id="address">
+                                    <input type="text" id="addressdetails"
+                                        placeholder="Flat/House No., Floor, Building/Company/Apartment Name,Road/Street Name, Area, Colony,Sector, Village (Required)*">
+                                </div>
+                                <div id="mobilenumber">
+
+                                    <input type="text" id="mobile" placeholder="Enter 10 digit mobile Number">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <hr>
+                    <div class="thirdbox">
+                        <div class="buttons">
+                            <div class="button1">
+                                <h4 id="cance"> Cancel</h4>
+                            </div>
+                            <div class="button2">
+                                <button id="save">Save and Continue</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="payable">
+                <div class="div1">
+                    <div class="bagtotal">Bag Total</div>
+                    <div id="bagtotalprice"></div>
+                </div>
+                <div class="div2">
+                    <div class="shippingcharge">Shipping Charge</div>
+                    <div id="shippingprice"></div>
+                </div>
+                <div class="div3">
+                    <div class="bagsub">Bag SubTotal</div>
+                    <div id="bagsubprice"></div>
+                </div>
+                <div class="div4">
+                    <div class="Productdiscount">Product Discount(s)</div>
+                    <div id="pd"></div>
+                </div>
+                <div class="div5"></div>
+                
+                <div class="div6">
+                    <div class="total"><h4>Total Payable</h4></div>
+                    <div id="price"></div>
+                </div>
+                <div class="authen">
+                    <div class="authenlogo"><img
+                            src="https://www.tatacliq.com/src/cart/components/img/lock.cb17b4348d63.svg" alt=""></div>
+                    <div class="details">
+                        <p>Safe and secure payments. Easy returns.</p>
+                        <p> 100% Authentic products.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    document.getElementById("save").addEventListener("click", sendinfo)
+
+    // var fname=document.getElementById("fname").value;
+    // var sname=document.getElementById("sname").value;
+    // var city=document.getElementById("citydistrict").value;
+    // var state=document.getElementById("statedetails").value;
+    // var landmark=document.getElementById("landmark").value;
+    // console.log(fname,sname,city,state,landmark)
+
+    function sendinfo() {
+        var fname = document.getElementById("fname").value;
+        var sname = document.getElementById("sname").value;
+        var city = document.getElementById("citydistrict").value;
+        var state = document.getElementById("statedetails").value;
+        var pincode = document.getElementById("pincode").value;
+        var mob = document.getElementById("mobile").value;
+       
+
+        if (fname !== "" && sname !== "" && city !== "" && state !== "" && pincode !== "" && mob !== "") {
+           
+            let addressdetails = document.getElementById("addressdetails").value;
+            let obj = {
+                fname:fname,
+                sname:sname,
+                address: addressdetails,
+                
+            }
+
+            localStorage.setItem("database", JSON.stringify(obj))
+            window.location.href = "shippingconfirm.html"
+
+        }
+        else {
+            alert("fill  all details")
+        }
+
+    }
+
+    document.getElementById("cance").addEventListener("click",empty)
+
+    function empty()
+    {
+         document.getElementById("fname").value=""
+        document.getElementById("sname").value=""
+        document.getElementById("citydistrict").value=""
+        document.getElementById("statedetails").value=""
+     document.getElementById("pincode").value=""
+     document.getElementById("mobile").value=""
+
+    }
+
+    var pricereceive=JSON.parse(localStorage.getItem("data"));
+     console.log(pricereceive)
+    document.getElementById("bagtotalprice").innerText=pricereceive.totalprice;
+document.getElementById("shippingprice").innerText="0";
+
+document.getElementById("bagsubprice").innerText=pricereceive.totalprice;
+document.getElementById("pd").innerText="-"
+document.getElementById("price").innerText=pricereceive.totalprice;
+</script>
